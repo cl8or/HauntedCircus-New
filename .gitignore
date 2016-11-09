@@ -11,6 +11,7 @@
 *.swatches
 *.mayaSwatches
 *.tx
+*workspace.mel
 
 # Reject mac files
 *.DS_Store
