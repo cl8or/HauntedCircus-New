@@ -1,0 +1,16 @@
+# Reject folders
+**/autosave
+**/tmp
+**/incrementalSave
+**/.mayaSwatches
+**/published
+**/images
+
+
+# Reject file types
+*.swatches
+*.mayaSwatches
+*.tx
+
+# Reject mac files
+*.DS_Store
