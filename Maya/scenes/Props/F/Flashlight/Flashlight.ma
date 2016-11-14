@@ -1,10 +1,10 @@
 //Maya ASCII 2017 scene
 //Name: Flashlight.ma
-//Last modified: Mon, Nov 14, 2016 03:59:45 PM
+//Last modified: Mon, Nov 14, 2016 04:10:58 PM
 //Codeset: 1252
 requires maya "2017";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
-		 -nodeType "aiStandard" "mtoa" "1.3.0.0";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandard"
+		 "mtoa" "1.3.0.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2017";
@@ -2465,13 +2465,6 @@ createNode mesh -n "polySurfaceShape1" -p "Flashlight";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".bw" 3;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "aiSkyDomeLight1";
-	rename -uid "35C6164B-4518-B154-031C-C2914DDD916D";
-createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
-	rename -uid "8442448E-4E98-6C91-3B98-5891D39B5C4C";
-	setAttr -k off ".v";
-	setAttr ".csh" no;
-	setAttr ".rcsh" no;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "56174DB8-4A79-6F18-AE31-C6A6B7799FCF";
 	setAttr -s 11 ".lnk";
@@ -5082,7 +5075,6 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -s 24 ".u";
 select -ne :defaultRenderingList1;
-select -ne :lightList1;
 select -ne :defaultTextureList1;
 	setAttr -s 16 ".tx";
 select -ne :initialShadingGroup;
@@ -5098,7 +5090,6 @@ select -ne :defaultResolution;
 	setAttr ".h" 768;
 	setAttr ".pa" 1;
 	setAttr ".dar" 1.3333333730697632;
-select -ne :defaultLightSet;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
@@ -5664,11 +5655,8 @@ connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[
 		;
 connectAttr "place2dTexture17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[39].dn"
 		;
-connectAttr "aiSkyDomeLight1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn";
 connectAttr "gammaCorrect2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
 connectAttr "gammaCorrect3_f0.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "aiSkyDomeLightShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
 connectAttr "gammaCorrect8_f0.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
@@ -5778,7 +5766,6 @@ connectAttr "gammaCorrect8_f0.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "gammaCorrect9.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture19.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "aiSkyDomeLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
@@ -5795,5 +5782,4 @@ connectAttr "file15.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file16.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file17.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file19.msg" ":defaultTextureList1.tx" -na;
-connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
 // End of Flashlight.ma
