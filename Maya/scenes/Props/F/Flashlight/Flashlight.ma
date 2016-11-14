@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Flashlight.ma
-//Last modified: Wed, Nov 09, 2016 03:24:34 PM
+//Last modified: Mon, Nov 14, 2016 11:02:18 AM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandard"
@@ -15,14 +15,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CE363728-4642-C74D-9C8D-E6B15DDBABC9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 22.24425715522116 1.1800865429281964 -32.807077010632682 ;
-	setAttr ".r" -type "double3" 2166.8616473061593 1940.5999999911824 0 ;
+	setAttr ".t" -type "double3" 21.519850161602331 16.990768424425479 -34.488150656487782 ;
+	setAttr ".r" -type "double3" 2140.4616473048072 1944.9999999900231 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "667E1A30-4FBD-CCE7-BB66-5A8C490C729A";
 	setAttr -k off ".v" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 36.398346649860585;
+	setAttr ".coi" 36.398346649860251;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2466,19 +2466,19 @@ createNode mesh -n "polySurfaceShape1" -p "Flashlight";
 	setAttr ".bw" 3;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4BE2517E-4EC1-2577-1C7C-9D801C3A53BE";
+	rename -uid "EFDD6F6C-4E9F-84E0-DFF0-3180CCE0AFEA";
 	setAttr -s 11 ".lnk";
 	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C8091C30-44DA-59FC-D419-A7866B0C7B49";
+	rename -uid "C7EA388A-4C81-2521-A02E-27BAA36B6EB9";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "74FA3DDA-48CD-B110-51F8-C0B4AEF0E97D";
+	rename -uid "33DF6DDE-42F9-BC8A-72B8-D0A11174DECD";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "ECBACAB4-43B4-B01E-E4CC-869F378A1E90";
+	rename -uid "34083AC6-4A43-D5D0-1011-E0939608C9A2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "01960C64-4D14-267F-38A0-61ACE4CE57BF";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8161670E-41DA-5158-3219-B99737DC4801";
+	rename -uid "588129BB-4E4C-AACA-259F-3F9DF27CE209";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3037526F-4F52-A313-ADC9-53AE63F09A63";
 	setAttr ".g" yes;
@@ -4600,6 +4600,7 @@ createNode transformGeometry -n "transformGeometry1";
 createNode aiStandard -n "Button_Standard";
 	rename -uid "D2028F01-4E54-2EC6-B8FF-D88CEC155F79";
 	setAttr ".Ks" 1;
+	setAttr ".Krn" 1;
 	setAttr ".specular_Fresnel" yes;
 createNode shadingEngine -n "Button_Standard1";
 	rename -uid "6F8D2F6A-41E2-6250-C7C8-7BAEEB3EFAFC";
@@ -4609,32 +4610,28 @@ createNode materialInfo -n "materialInfo6";
 	rename -uid "86A21C98-4B04-BD03-7DDE-2C97B4E1AE7D";
 createNode file -n "file1";
 	rename -uid "7701E5F1-40D8-8768-0866-C6BEA82F1754";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Button/Flashlight_Button_Diffuse.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Button_Texture/Flashlight_Button_Diffuse.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture1";
 	rename -uid "FBE58AF5-47AF-BA0C-D71C-40A5A4099640";
 createNode file -n "file2";
 	rename -uid "C61FEB21-462F-FA44-1B7B-80A4C2639F7C";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Button/Flashlight_Button_Specular.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Button_Texture/Flashlight_Button_Specular.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture2";
 	rename -uid "EB24C31B-4DE4-72A3-3697-A7B76F3EF78B";
 createNode file -n "file3";
 	rename -uid "C821B531-47D5-0725-FA61-71BDC77967A6";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Button/Flashlight_Button_Roughness.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Button_Texture/Flashlight_Button_Roughness.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture3";
 	rename -uid "B0B85F3F-4565-AF2C-408F-C09635FD3B1B";
-createNode file -n "file4";
-	rename -uid "F22DF3E4-4FE3-B9C2-B560-CEAC8C8EBACF";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Button/Flashlight_Button_f0.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture4";
-	rename -uid "401FA8B3-45A4-096E-C7B0-CC9FA1411704";
 createNode aiStandard -n "Base_Standard";
 	rename -uid "94712ABA-46E5-BE86-854E-BB80C0929072";
 	setAttr ".Kd" 0.50224214792251587;
 	setAttr ".Ks" 1;
+	setAttr ".Kr_color" -type "float3" 0 0 0 ;
+	setAttr -av ".Krn" 1;
 	setAttr ".specular_Fresnel" yes;
 createNode shadingEngine -n "Base_Standard1";
 	rename -uid "5F97BE96-4536-5FE2-796B-6E8B41127EA9";
@@ -4645,31 +4642,25 @@ createNode materialInfo -n "materialInfo7";
 createNode file -n "file5";
 	rename -uid "F6B4ABBB-4E26-7683-5329-099593EC0DF0";
 	setAttr ".co" -type "float3" 0.22510822 0.22510822 0.22510822 ;
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Flashlight_Base/Flashlight_FlashlightBase_Diffuse.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Base_Texture/Flashlight_FlashlightBase_Diffuse.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture5";
 	rename -uid "8B0D95B5-4232-32C7-1E8F-85B6A31A4EAD";
 createNode file -n "file6";
 	rename -uid "DC77017D-4352-8C8C-B6E6-2E8CB9853593";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Flashlight_Base/Flashlight_FlashlightBase_Specular.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Base_Texture/Flashlight_FlashlightBase_Specular.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture6";
 	rename -uid "7865288A-4FD8-E2D3-CD59-008416AC4093";
 createNode file -n "file7";
 	rename -uid "87158FD9-4413-6B94-29CA-3FB174F2C2A8";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Flashlight_Base/Flashlight_FlashlightBase_Roughness.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Base_Texture/Flashlight_FlashlightBase_Roughness.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture7";
 	rename -uid "D59EF4CD-4F33-71A4-D78C-00A537B4D6E8";
-createNode file -n "file8";
-	rename -uid "6537AB85-4EC9-05DC-7A71-B4B083AFFAC6";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Flashlight_Base/Flashlight_FlashlightBase_f0.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture8";
-	rename -uid "756C9641-41BF-1E4C-4402-6BAA66D049C8";
 createNode file -n "file9";
 	rename -uid "BB7FF625-42A5-F714-FC24-E2A038B0644F";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Flashlight_Base/Flashlight_FlashlightBase_f0.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Base_Texture/Flashlight_FlashlightBase_f0.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture9";
 	rename -uid "B59712B5-4BCC-E2B7-1888-119DDCB5846C";
@@ -4688,7 +4679,7 @@ createNode file -n "file10";
 	rename -uid "A69526CD-48CD-D224-BF59-C3B291DA1D26";
 	setAttr ".co" -type "float3" 0.3116883 0.3116883 0.3116883 ;
 	setAttr ".dc" -type "float3" 0.85281384 0.85281384 0.85281384 ;
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Front_Glass/Flashlight_Front_Glass_Diffuse.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Glass_Texture/Flashlight_Front_Glass_Diffuse.png";
 	setAttr ".exp" -2.4025974273681641;
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture10";
@@ -4699,27 +4690,27 @@ createNode file -n "file11";
 	setAttr ".ag" 1.3593074083328247;
 	setAttr ".ao" 1.0216450691223145;
 	setAttr ".dc" -type "float3" 0.89610392 0.89610392 0.89610392 ;
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Front_Glass/Flashlight_Front_Glass_Specular.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Glass_Texture/Flashlight_Front_Glass_Specular.png";
 	setAttr ".exp" 0.10822510719299316;
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture11";
 	rename -uid "73110B55-4EA6-1E17-41E5-18A4864C5920";
 createNode file -n "file12";
 	rename -uid "47347401-4DB0-7ABF-BE6E-D390DFFD35F3";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Front_Glass/Flashlight_Front_Glass_Roughness.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Glass_Texture/Flashlight_Front_Glass_Roughness.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture12";
 	rename -uid "119D44A7-4B50-FB1C-642B-FBA49F0A74B8";
 createNode file -n "file13";
 	rename -uid "A6077AA9-4F59-64A8-5999-B68538AB42A7";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Front_Glass/Flashlight_Front_Glass_f0.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Glass_Texture/Flashlight_Front_Glass_f0.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture13";
 	rename -uid "A7D8F3C9-4643-3B3E-72DF-3186E7ABC0B5";
-createNode aiStandard -n "aiStandard1";
+createNode aiStandard -n "Lightbulb1";
 	rename -uid "DFF964FE-450A-C9C0-FF21-D0B833DCF77D";
 	setAttr ".specular_Fresnel" yes;
-createNode shadingEngine -n "aiStandard1SG";
+createNode shadingEngine -n "Lightbulb2";
 	rename -uid "174A031B-4A55-396A-9B97-0794FE12F265";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
@@ -4727,160 +4718,160 @@ createNode materialInfo -n "materialInfo9";
 	rename -uid "AB46EBC4-4FAD-BD3D-88EE-FF832872B24B";
 createNode file -n "file14";
 	rename -uid "403BC8EB-4B0D-2E78-2A08-9E929E5CC83A";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Lightbulb/Flashlight_Lightbulb_Diffuse.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Lightbulb_Texture/Flashlight_Lightbulb_Diffuse.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture14";
 	rename -uid "2DB4234F-41AB-9951-EAB6-84884E3BC2F2";
 createNode file -n "file15";
 	rename -uid "F64123CF-4FA3-532C-1DF0-90BC08D3547A";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Lightbulb/Flashlight_Lightbulb_Specular.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Lightbulb_Texture/Flashlight_Lightbulb_Specular.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture15";
 	rename -uid "38030D1B-4330-A231-EBED-049D27D99C8A";
 createNode file -n "file16";
 	rename -uid "D65C4AB8-4861-CDCB-C267-D081A259131E";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Lightbulb/Flashlight_Lightbulb_Roughness.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Lightbulb_Texture/Flashlight_Lightbulb_Roughness.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture16";
 	rename -uid "553DA16D-49BE-0019-A4F0-43B9B5DED857";
 createNode file -n "file17";
 	rename -uid "6EB3FDF2-42EF-D243-63B1-15B6D86AB807";
-	setAttr ".ftn" -type "string" "C:/Users/Sadie/Desktop/HauntedCircus/Maya//sourceimages/Props/F/Flashlight/Lightbulb/Flashlight_Lightbulb_f0.png";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Lightbulb_Texture/Flashlight_Lightbulb_f0.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture17";
 	rename -uid "ADB7E647-478B-9EEE-D181-AE8B1A21FA72";
+createNode file -n "file18";
+	rename -uid "382CD952-4D0E-C250-AD06-5BA31A3A6CCE";
+	setAttr ".ftn" -type "string" "C:/Users/Sadie/NewHauntedCircus/Maya/sourceimages/Props/F/Flashlight/Button_Texture/Flashlight_Button_Diffuse.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture18";
+	rename -uid "E1B01273-4A84-D763-628C-E5B0CF8CF810";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "D41FDBA4-4E00-23C3-91C6-B5A1511DD691";
+	rename -uid "F32A2C3A-47AC-0F60-6C42-8599C48E430A";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -2168.5909988407493 -1504.3955200876287 ;
-	setAttr ".tgi[0].vh" -type "double2" -1340.6123874172711 -664.28535391801881 ;
-	setAttr -s 42 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -1305.7142333984375;
-	setAttr ".tgi[0].ni[0].y" 32.857143402099609;
+	setAttr ".tgi[0].vl" -type "double2" -1864.5779095646244 -2091.6170618792444 ;
+	setAttr ".tgi[0].vh" -type "double2" 437.11407294365409 237.83960075579316 ;
+	setAttr -s 40 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -1646.3177490234375;
+	setAttr ".tgi[0].ni[0].y" -821.5181884765625;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" -1305.7142333984375;
-	setAttr ".tgi[0].ni[1].y" 384.28570556640625;
+	setAttr ".tgi[0].ni[1].x" -855.9263916015625;
+	setAttr ".tgi[0].ni[1].y" -1174.906494140625;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -2352.9638671875;
-	setAttr ".tgi[0].ni[2].y" -528.41363525390625;
+	setAttr ".tgi[0].ni[2].x" -2043.8543701171875;
+	setAttr ".tgi[0].ni[2].y" -323.31912231445312;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" -2404.28564453125;
-	setAttr ".tgi[0].ni[3].y" -1321.4285888671875;
+	setAttr ".tgi[0].ni[3].x" -532.124755859375;
+	setAttr ".tgi[0].ni[3].y" -1040.2645263671875;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" -2180;
-	setAttr ".tgi[0].ni[4].y" 657.14288330078125;
+	setAttr ".tgi[0].ni[4].x" -236.08782958984375;
+	setAttr ".tgi[0].ni[4].y" -1126.3349609375;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" -2097.142822265625;
-	setAttr ".tgi[0].ni[5].y" -1122.857177734375;
+	setAttr ".tgi[0].ni[5].x" -1394.01025390625;
+	setAttr ".tgi[0].ni[5].y" -884.68280029296875;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" -2320.41357421875;
-	setAttr ".tgi[0].ni[6].y" 34.109981536865234;
+	setAttr ".tgi[0].ni[6].x" -2275.989990234375;
+	setAttr ".tgi[0].ni[6].y" -71.395805358886719;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" -1258.5714111328125;
-	setAttr ".tgi[0].ni[7].y" 524.28570556640625;
+	setAttr ".tgi[0].ni[7].x" -759.28497314453125;
+	setAttr ".tgi[0].ni[7].y" -448.53680419921875;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
-	setAttr ".tgi[0].ni[8].x" -691.4285888671875;
-	setAttr ".tgi[0].ni[8].y" 81.428573608398438;
+	setAttr ".tgi[0].ni[8].x" -1169.1571044921875;
+	setAttr ".tgi[0].ni[8].y" -479.88839721679687;
 	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" -1612.857177734375;
-	setAttr ".tgi[0].ni[9].y" 185.71427917480469;
+	setAttr ".tgi[0].ni[9].x" -164.43452453613281;
+	setAttr ".tgi[0].ni[9].y" -699.87109375;
 	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" -2088.27783203125;
-	setAttr ".tgi[0].ni[10].y" -217.81333923339844;
+	setAttr ".tgi[0].ni[10].x" -2019.7955322265625;
+	setAttr ".tgi[0].ni[10].y" -109.39359283447266;
 	setAttr ".tgi[0].ni[10].nvs" 1923;
-	setAttr ".tgi[0].ni[11].x" -1790;
-	setAttr ".tgi[0].ni[11].y" -1390;
+	setAttr ".tgi[0].ni[11].x" -1983.3076171875;
+	setAttr ".tgi[0].ni[11].y" -1039.7685546875;
 	setAttr ".tgi[0].ni[11].nvs" 1923;
-	setAttr ".tgi[0].ni[12].x" -1872.857177734375;
-	setAttr ".tgi[0].ni[12].y" 327.14285278320312;
+	setAttr ".tgi[0].ni[12].x" -1457.8734130859375;
+	setAttr ".tgi[0].ni[12].y" -347.8983154296875;
 	setAttr ".tgi[0].ni[12].nvs" 1923;
-	setAttr ".tgi[0].ni[13].x" -2138.958251953125;
-	setAttr ".tgi[0].ni[13].y" 1018.76513671875;
+	setAttr ".tgi[0].ni[13].x" -847.59698486328125;
+	setAttr ".tgi[0].ni[13].y" -817.9249267578125;
 	setAttr ".tgi[0].ni[13].nvs" 1923;
-	setAttr ".tgi[0].ni[14].x" -2404.28564453125;
-	setAttr ".tgi[0].ni[14].y" -1497.142822265625;
+	setAttr ".tgi[0].ni[14].x" -787.04962158203125;
+	setAttr ".tgi[0].ni[14].y" -590.342041015625;
 	setAttr ".tgi[0].ni[14].nvs" 1923;
-	setAttr ".tgi[0].ni[15].x" -1305.7142333984375;
-	setAttr ".tgi[0].ni[15].y" -142.85714721679687;
+	setAttr ".tgi[0].ni[15].x" -418.82449340820312;
+	setAttr ".tgi[0].ni[15].y" -505.518310546875;
 	setAttr ".tgi[0].ni[15].nvs" 1923;
-	setAttr ".tgi[0].ni[16].x" -1872.857177734375;
-	setAttr ".tgi[0].ni[16].y" 678.5714111328125;
+	setAttr ".tgi[0].ni[16].x" -2083.480712890625;
+	setAttr ".tgi[0].ni[16].y" -460.82217407226562;
 	setAttr ".tgi[0].ni[16].nvs" 1923;
-	setAttr ".tgi[0].ni[17].x" -2097.142822265625;
-	setAttr ".tgi[0].ni[17].y" -1474.2857666015625;
+	setAttr ".tgi[0].ni[17].x" -1157.5164794921875;
+	setAttr ".tgi[0].ni[17].y" -1022.04931640625;
 	setAttr ".tgi[0].ni[17].nvs" 1923;
-	setAttr ".tgi[0].ni[18].x" -2097.142822265625;
-	setAttr ".tgi[0].ni[18].y" -1298.5714111328125;
+	setAttr ".tgi[0].ni[18].x" -2376.52099609375;
+	setAttr ".tgi[0].ni[18].y" -843.8760986328125;
 	setAttr ".tgi[0].ni[18].nvs" 1923;
-	setAttr ".tgi[0].ni[19].x" -1872.857177734375;
-	setAttr ".tgi[0].ni[19].y" 854.28570556640625;
+	setAttr ".tgi[0].ni[19].x" -2376.52099609375;
+	setAttr ".tgi[0].ni[19].y" -1195.3046875;
 	setAttr ".tgi[0].ni[19].nvs" 1923;
-	setAttr ".tgi[0].ni[20].x" -1612.857177734375;
-	setAttr ".tgi[0].ni[20].y" 10;
+	setAttr ".tgi[0].ni[20].x" -1163.604248046875;
+	setAttr ".tgi[0].ni[20].y" -160.98063659667969;
 	setAttr ".tgi[0].ni[20].nvs" 1923;
-	setAttr ".tgi[0].ni[21].x" -2180;
-	setAttr ".tgi[0].ni[21].y" 831.4285888671875;
+	setAttr ".tgi[0].ni[21].x" -756.50848388671875;
+	setAttr ".tgi[0].ni[21].y" -97.108238220214844;
 	setAttr ".tgi[0].ni[21].nvs" 1923;
-	setAttr ".tgi[0].ni[22].x" -1502.296875;
-	setAttr ".tgi[0].ni[22].y" -242.39253234863281;
+	setAttr ".tgi[0].ni[22].x" -1157.5164794921875;
+	setAttr ".tgi[0].ni[22].y" -1197.7635498046875;
 	setAttr ".tgi[0].ni[22].nvs" 1923;
-	setAttr ".tgi[0].ni[23].x" -2180;
-	setAttr ".tgi[0].ni[23].y" 481.42855834960937;
+	setAttr ".tgi[0].ni[23].x" -759.28497314453125;
+	setAttr ".tgi[0].ni[23].y" -272.822509765625;
 	setAttr ".tgi[0].ni[23].nvs" 1923;
-	setAttr ".tgi[0].ni[24].x" -1872.857177734375;
-	setAttr ".tgi[0].ni[24].y" 1038.7784423828125;
+	setAttr ".tgi[0].ni[24].x" -2325.52294921875;
+	setAttr ".tgi[0].ni[24].y" -289.5670166015625;
 	setAttr ".tgi[0].ni[24].nvs" 1923;
-	setAttr ".tgi[0].ni[25].x" -2064.218994140625;
-	setAttr ".tgi[0].ni[25].y" -3.8878118991851807;
+	setAttr ".tgi[0].ni[25].x" -2376.52099609375;
+	setAttr ".tgi[0].ni[25].y" -668.1617431640625;
 	setAttr ".tgi[0].ni[25].nvs" 1923;
-	setAttr ".tgi[0].ni[26].x" -2369.946533203125;
-	setAttr ".tgi[0].ni[26].y" -184.06123352050781;
+	setAttr ".tgi[0].ni[26].x" -1157.5164794921875;
+	setAttr ".tgi[0].ni[26].y" -1373.4779052734375;
 	setAttr ".tgi[0].ni[26].nvs" 1923;
-	setAttr ".tgi[0].ni[27].x" -1482.857177734375;
-	setAttr ".tgi[0].ni[27].y" -1390;
+	setAttr ".tgi[0].ni[27].x" -1157.5164794921875;
+	setAttr ".tgi[0].ni[27].y" -846.33502197265625;
 	setAttr ".tgi[0].ni[27].nvs" 1923;
-	setAttr ".tgi[0].ni[28].x" -1305.7142333984375;
-	setAttr ".tgi[0].ni[28].y" 208.57142639160156;
+	setAttr ".tgi[0].ni[28].x" -2376.52099609375;
+	setAttr ".tgi[0].ni[28].y" -1019.59033203125;
 	setAttr ".tgi[0].ni[28].nvs" 1923;
-	setAttr ".tgi[0].ni[29].x" -2404.28564453125;
-	setAttr ".tgi[0].ni[29].y" -1145.7142333984375;
+	setAttr ".tgi[0].ni[29].x" -2334.014404296875;
+	setAttr ".tgi[0].ni[29].y" -444.0528564453125;
 	setAttr ".tgi[0].ni[29].nvs" 1923;
-	setAttr ".tgi[0].ni[30].x" -998.5714111328125;
-	setAttr ".tgi[0].ni[30].y" 81.428573608398438;
+	setAttr ".tgi[0].ni[30].x" -1163.604248046875;
+	setAttr ".tgi[0].ni[30].y" -336.69491577148437;
 	setAttr ".tgi[0].ni[30].nvs" 1923;
-	setAttr ".tgi[0].ni[31].x" -2097.142822265625;
-	setAttr ".tgi[0].ni[31].y" -1650;
+	setAttr ".tgi[0].ni[31].x" -850.37347412109375;
+	setAttr ".tgi[0].ni[31].y" -999.192138671875;
 	setAttr ".tgi[0].ni[31].nvs" 1923;
-	setAttr ".tgi[0].ni[32].x" -1872.857177734375;
-	setAttr ".tgi[0].ni[32].y" 502.85714721679687;
+	setAttr ".tgi[0].ni[32].x" -1163.604248046875;
+	setAttr ".tgi[0].ni[32].y" 14.733654022216797;
 	setAttr ".tgi[0].ni[32].nvs" 1923;
-	setAttr ".tgi[0].ni[33].x" -2378.43798828125;
-	setAttr ".tgi[0].ni[33].y" -338.54705810546875;
+	setAttr ".tgi[0].ni[33].x" -1994.4134521484375;
+	setAttr ".tgi[0].ni[33].y" -864.05413818359375;
 	setAttr ".tgi[0].ni[33].nvs" 1923;
-	setAttr ".tgi[0].ni[34].x" -2126.22119140625;
-	setAttr ".tgi[0].ni[34].y" 314.20565795898437;
+	setAttr ".tgi[0].ni[34].x" -2044.389892578125;
+	setAttr ".tgi[0].ni[34].y" -680.01055908203125;
 	setAttr ".tgi[0].ni[34].nvs" 1923;
-	setAttr ".tgi[0].ni[35].x" -1730.186767578125;
-	setAttr ".tgi[0].ni[35].y" -223.99453735351562;
+	setAttr ".tgi[0].ni[35].x" -850.37347412109375;
+	setAttr ".tgi[0].ni[35].y" -1350.6207275390625;
 	setAttr ".tgi[0].ni[35].nvs" 1923;
-	setAttr ".tgi[0].ni[36].x" -2127.904296875;
-	setAttr ".tgi[0].ni[36].y" -355.31637573242187;
+	setAttr ".tgi[0].ni[36].x" -1687.7265625;
+	setAttr ".tgi[0].ni[36].y" -329.50033569335937;
 	setAttr ".tgi[0].ni[36].nvs" 1923;
-	setAttr ".tgi[0].ni[37].x" -2404.28564453125;
-	setAttr ".tgi[0].ni[37].y" -1672.857177734375;
+	setAttr ".tgi[0].ni[37].x" -1991.6370849609375;
+	setAttr ".tgi[0].ni[37].y" -1215.4827880859375;
 	setAttr ".tgi[0].ni[37].nvs" 1923;
-	setAttr ".tgi[0].ni[38].x" -2122.243408203125;
-	setAttr ".tgi[0].ni[38].y" -553.67437744140625;
+	setAttr ".tgi[0].ni[38].x" -2293.626708984375;
+	setAttr ".tgi[0].ni[38].y" 63.502540588378906;
 	setAttr ".tgi[0].ni[38].nvs" 1923;
-	setAttr ".tgi[0].ni[39].x" -1565.7142333984375;
-	setAttr ".tgi[0].ni[39].y" 524.28570556640625;
+	setAttr ".tgi[0].ni[39].x" -1983.7073974609375;
+	setAttr ".tgi[0].ni[39].y" 46.060562133789063;
 	setAttr ".tgi[0].ni[39].nvs" 1923;
-	setAttr ".tgi[0].ni[40].x" -1612.857177734375;
-	setAttr ".tgi[0].ni[40].y" 361.42855834960937;
-	setAttr ".tgi[0].ni[40].nvs" 1923;
-	setAttr ".tgi[0].ni[41].x" -1612.857177734375;
-	setAttr ".tgi[0].ni[41].y" -165.71427917480469;
-	setAttr ".tgi[0].ni[41].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -4898,10 +4889,10 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 17 ".u";
+	setAttr -s 16 ".u";
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
-	setAttr -s 17 ".tx";
+	setAttr -s 16 ".tx";
 select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
@@ -4925,7 +4916,7 @@ connectAttr "Button_Standard1.mwc" "FlashlightShape.iog.og[0].gco";
 connectAttr "groupId20.id" "FlashlightShape.iog.og[1].gid";
 connectAttr "Glass1.mwc" "FlashlightShape.iog.og[1].gco";
 connectAttr "groupId21.id" "FlashlightShape.iog.og[2].gid";
-connectAttr "aiStandard1SG.mwc" "FlashlightShape.iog.og[2].gco";
+connectAttr "Lightbulb2.mwc" "FlashlightShape.iog.og[2].gco";
 connectAttr "groupId22.id" "FlashlightShape.iog.og[3].gid";
 connectAttr "Base_Standard1.mwc" "FlashlightShape.iog.og[3].gco";
 connectAttr "transformGeometry1.og" "FlashlightShape.i";
@@ -4940,7 +4931,7 @@ relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.messa
 relationship "link" ":lightLinker1" "Button_Standard1.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Base_Standard1.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Glass1.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "aiStandard1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Lightbulb2.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -4951,7 +4942,7 @@ relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet
 relationship "shadowLink" ":lightLinker1" "Button_Standard1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Base_Standard1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Glass1.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "aiStandard1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Lightbulb2.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "Flashlight_Glass_Front.oc" "blinn1SG.ss";
@@ -5006,7 +4997,7 @@ connectAttr "polyTweakUV8.out" "transformGeometry1.ig";
 connectAttr "file1.oc" "Button_Standard.Kd_color";
 connectAttr "file2.oc" "Button_Standard.Ks_color";
 connectAttr "file3.oa" "Button_Standard.specular_roughness";
-connectAttr "file4.oa" "Button_Standard.Krn";
+connectAttr "file18.oa" "Button_Standard.Ksn";
 connectAttr "Button_Standard.out" "Button_Standard1.ss";
 connectAttr "FlashlightShape.iog.og[0]" "Button_Standard1.dsm" -na;
 connectAttr "Button_Standard1.msg" "materialInfo6.sg";
@@ -5078,32 +5069,9 @@ connectAttr "place2dTexture3.vt3" "file3.vt3";
 connectAttr "place2dTexture3.vc1" "file3.vc1";
 connectAttr "place2dTexture3.o" "file3.uv";
 connectAttr "place2dTexture3.ofs" "file3.fs";
-connectAttr ":defaultColorMgtGlobals.cme" "file4.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file4.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file4.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file4.ws";
-connectAttr "place2dTexture4.c" "file4.c";
-connectAttr "place2dTexture4.tf" "file4.tf";
-connectAttr "place2dTexture4.rf" "file4.rf";
-connectAttr "place2dTexture4.mu" "file4.mu";
-connectAttr "place2dTexture4.mv" "file4.mv";
-connectAttr "place2dTexture4.s" "file4.s";
-connectAttr "place2dTexture4.wu" "file4.wu";
-connectAttr "place2dTexture4.wv" "file4.wv";
-connectAttr "place2dTexture4.re" "file4.re";
-connectAttr "place2dTexture4.of" "file4.of";
-connectAttr "place2dTexture4.r" "file4.ro";
-connectAttr "place2dTexture4.n" "file4.n";
-connectAttr "place2dTexture4.vt1" "file4.vt1";
-connectAttr "place2dTexture4.vt2" "file4.vt2";
-connectAttr "place2dTexture4.vt3" "file4.vt3";
-connectAttr "place2dTexture4.vc1" "file4.vc1";
-connectAttr "place2dTexture4.o" "file4.uv";
-connectAttr "place2dTexture4.ofs" "file4.fs";
 connectAttr "file5.oc" "Base_Standard.Kd_color";
 connectAttr "file6.oc" "Base_Standard.Ks_color";
 connectAttr "file7.oa" "Base_Standard.specular_roughness";
-connectAttr "file8.oa" "Base_Standard.Krn";
 connectAttr "file9.oa" "Base_Standard.Ksn";
 connectAttr "Base_Standard.out" "Base_Standard1.ss";
 connectAttr "FlashlightShape.iog.og[3]" "Base_Standard1.dsm" -na;
@@ -5176,28 +5144,6 @@ connectAttr "place2dTexture7.vt3" "file7.vt3";
 connectAttr "place2dTexture7.vc1" "file7.vc1";
 connectAttr "place2dTexture7.o" "file7.uv";
 connectAttr "place2dTexture7.ofs" "file7.fs";
-connectAttr ":defaultColorMgtGlobals.cme" "file8.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file8.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file8.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file8.ws";
-connectAttr "place2dTexture8.c" "file8.c";
-connectAttr "place2dTexture8.tf" "file8.tf";
-connectAttr "place2dTexture8.rf" "file8.rf";
-connectAttr "place2dTexture8.mu" "file8.mu";
-connectAttr "place2dTexture8.mv" "file8.mv";
-connectAttr "place2dTexture8.s" "file8.s";
-connectAttr "place2dTexture8.wu" "file8.wu";
-connectAttr "place2dTexture8.wv" "file8.wv";
-connectAttr "place2dTexture8.re" "file8.re";
-connectAttr "place2dTexture8.of" "file8.of";
-connectAttr "place2dTexture8.r" "file8.ro";
-connectAttr "place2dTexture8.n" "file8.n";
-connectAttr "place2dTexture8.vt1" "file8.vt1";
-connectAttr "place2dTexture8.vt2" "file8.vt2";
-connectAttr "place2dTexture8.vt3" "file8.vt3";
-connectAttr "place2dTexture8.vc1" "file8.vc1";
-connectAttr "place2dTexture8.o" "file8.uv";
-connectAttr "place2dTexture8.ofs" "file8.fs";
 connectAttr ":defaultColorMgtGlobals.cme" "file9.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "file9.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "file9.cmcp";
@@ -5317,15 +5263,15 @@ connectAttr "place2dTexture13.vt3" "file13.vt3";
 connectAttr "place2dTexture13.vc1" "file13.vc1";
 connectAttr "place2dTexture13.o" "file13.uv";
 connectAttr "place2dTexture13.ofs" "file13.fs";
-connectAttr "file14.oc" "aiStandard1.Kd_color";
-connectAttr "file15.oc" "aiStandard1.Ks_color";
-connectAttr "file16.oa" "aiStandard1.diffuse_roughness";
-connectAttr "file17.oa" "aiStandard1.Ksn";
-connectAttr "aiStandard1.out" "aiStandard1SG.ss";
-connectAttr "FlashlightShape.iog.og[2]" "aiStandard1SG.dsm" -na;
-connectAttr "aiStandard1SG.msg" "materialInfo9.sg";
-connectAttr "aiStandard1.msg" "materialInfo9.m";
-connectAttr "aiStandard1.msg" "materialInfo9.t" -na;
+connectAttr "file14.oc" "Lightbulb1.Kd_color";
+connectAttr "file15.oc" "Lightbulb1.Ks_color";
+connectAttr "file16.oa" "Lightbulb1.diffuse_roughness";
+connectAttr "file17.oa" "Lightbulb1.Ksn";
+connectAttr "Lightbulb1.out" "Lightbulb2.ss";
+connectAttr "FlashlightShape.iog.og[2]" "Lightbulb2.dsm" -na;
+connectAttr "Lightbulb2.msg" "materialInfo9.sg";
+connectAttr "Lightbulb1.msg" "materialInfo9.m";
+connectAttr "Lightbulb1.msg" "materialInfo9.t" -na;
 connectAttr ":defaultColorMgtGlobals.cme" "file14.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "file14.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "file14.cmcp";
@@ -5414,89 +5360,107 @@ connectAttr "place2dTexture17.vt3" "file17.vt3";
 connectAttr "place2dTexture17.vc1" "file17.vc1";
 connectAttr "place2dTexture17.o" "file17.uv";
 connectAttr "place2dTexture17.ofs" "file17.fs";
-connectAttr "file12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr ":defaultColorMgtGlobals.cme" "file18.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file18.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file18.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file18.ws";
+connectAttr "place2dTexture18.c" "file18.c";
+connectAttr "place2dTexture18.tf" "file18.tf";
+connectAttr "place2dTexture18.rf" "file18.rf";
+connectAttr "place2dTexture18.mu" "file18.mu";
+connectAttr "place2dTexture18.mv" "file18.mv";
+connectAttr "place2dTexture18.s" "file18.s";
+connectAttr "place2dTexture18.wu" "file18.wu";
+connectAttr "place2dTexture18.wv" "file18.wv";
+connectAttr "place2dTexture18.re" "file18.re";
+connectAttr "place2dTexture18.of" "file18.of";
+connectAttr "place2dTexture18.r" "file18.ro";
+connectAttr "place2dTexture18.n" "file18.n";
+connectAttr "place2dTexture18.vt1" "file18.vt1";
+connectAttr "place2dTexture18.vt2" "file18.vt2";
+connectAttr "place2dTexture18.vt3" "file18.vt3";
+connectAttr "place2dTexture18.vc1" "file18.vc1";
+connectAttr "place2dTexture18.o" "file18.uv";
+connectAttr "place2dTexture18.ofs" "file18.fs";
+connectAttr "Lightbulb1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "file10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "file12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "place2dTexture4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "place2dTexture15.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "Glass.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "place2dTexture6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "Glass1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "file14.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "Lightbulb2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
 connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "Base_Standard1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "file7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "Glass1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "place2dTexture5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "place2dTexture11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "Base_Standard1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "aiStandard1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "file16.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr "file8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "Button_Standard1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
 		;
-connectAttr "place2dTexture9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+connectAttr "file10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
 		;
-connectAttr "place2dTexture16.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
 		;
-connectAttr "file13.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+connectAttr "Base_Standard.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
 		;
-connectAttr "file6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
 		;
-connectAttr "file16.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+connectAttr "place2dTexture11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
 		;
-connectAttr "file15.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+connectAttr "place2dTexture15.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
 		;
-connectAttr "file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+connectAttr "place2dTexture17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
 		;
-connectAttr "place2dTexture12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
+connectAttr "place2dTexture6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
 		;
-connectAttr "place2dTexture5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+connectAttr "file9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
 		;
-connectAttr "Button_Standard1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
+connectAttr "place2dTexture12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
 		;
-connectAttr "place2dTexture7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
+connectAttr "file6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
 		;
-connectAttr "file9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
+connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
 		;
-connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
+connectAttr "place2dTexture14.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
 		;
-connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
+connectAttr "place2dTexture13.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
 		;
-connectAttr "aiStandard1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
+connectAttr "place2dTexture10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
 		;
-connectAttr "file11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
+connectAttr "place2dTexture16.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
 		;
-connectAttr "place2dTexture14.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
+connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
 		;
-connectAttr "Glass.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
+connectAttr "place2dTexture7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
 		;
-connectAttr "file17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
+connectAttr "file11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
 		;
-connectAttr "file7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
+connectAttr "place2dTexture9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
 		;
-connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
+connectAttr "file15.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
 		;
-connectAttr "place2dTexture8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
+connectAttr "file14.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
 		;
-connectAttr "Button_Standard.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[35].dn"
+connectAttr "file13.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[35].dn"
 		;
-connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[36].dn"
+connectAttr "Button_Standard.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[36].dn"
 		;
-connectAttr "place2dTexture17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[37].dn"
+connectAttr "file17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[37].dn"
 		;
-connectAttr "file4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[38].dn"
+connectAttr "place2dTexture18.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[38].dn"
 		;
-connectAttr "Base_Standard.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[39].dn"
-		;
-connectAttr "place2dTexture10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[40].dn"
-		;
-connectAttr "place2dTexture13.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[41].dn"
+connectAttr "file18.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[39].dn"
 		;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn2SG.pa" ":renderPartition.st" -na;
@@ -5506,7 +5470,7 @@ connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "Button_Standard1.pa" ":renderPartition.st" -na;
 connectAttr "Base_Standard1.pa" ":renderPartition.st" -na;
 connectAttr "Glass1.pa" ":renderPartition.st" -na;
-connectAttr "aiStandard1SG.pa" ":renderPartition.st" -na;
+connectAttr "Lightbulb2.pa" ":renderPartition.st" -na;
 connectAttr "Flashlight_Glass_Front.msg" ":defaultShaderList1.s" -na;
 connectAttr "Front_Glass.msg" ":defaultShaderList1.s" -na;
 connectAttr "Lightbulb.msg" ":defaultShaderList1.s" -na;
@@ -5515,15 +5479,13 @@ connectAttr "Button.msg" ":defaultShaderList1.s" -na;
 connectAttr "Button_Standard.msg" ":defaultShaderList1.s" -na;
 connectAttr "Base_Standard.msg" ":defaultShaderList1.s" -na;
 connectAttr "Glass.msg" ":defaultShaderList1.s" -na;
-connectAttr "aiStandard1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Lightbulb1.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture8.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture9.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture10.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture11.msg" ":defaultRenderUtilityList1.u" -na;
@@ -5533,15 +5495,14 @@ connectAttr "place2dTexture14.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture15.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture16.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture17.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture18.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file9.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file10.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file11.msg" ":defaultTextureList1.tx" -na;
@@ -5551,4 +5512,5 @@ connectAttr "file14.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file15.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file16.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file17.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file18.msg" ":defaultTextureList1.tx" -na;
 // End of Flashlight.ma
