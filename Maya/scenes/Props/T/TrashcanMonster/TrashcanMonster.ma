@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: TrashcanMonster.ma
-//Last modified: Sat, Nov 12, 2016 05:50:50 PM
+//Last modified: Mon, Nov 14, 2016 02:38:58 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "1.3.0.0";
@@ -17639,19 +17639,19 @@ createNode mesh -n "ULToothShape1Orig" -p "ULTooth";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "BCA21F0F-4709-2160-F81F-64AEEF53E8B8";
+	rename -uid "D27CA4A7-42B0-BF6F-6B0D-EEB0606106AB";
 	setAttr -s 14 ".lnk";
 	setAttr -s 14 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6EBE649E-43C0-E376-C515-00922D88BA40";
+	rename -uid "2D374529-4C82-E773-61BB-709FA2A557D0";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FA45A835-4A36-A0C0-8314-85AC7F23A5CC";
+	rename -uid "FF349FD7-4ABD-7761-6772-D4894ACC0073";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B2AD3ECC-48C7-4D12-6A6C-7A93BFCFBB04";
+	rename -uid "EE3F3015-461E-97D8-8321-EB9D89DA3626";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B901CF24-414D-3825-D6E8-5BB84B75D893";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C4B03478-4FFD-B654-A533-4EB3C27533BF";
+	rename -uid "78456A71-4C6B-A6A9-D95F-D69672D24383";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "79009F8E-40B3-1A8D-42AF-978139E9C9DC";
 	setAttr ".g" yes;
@@ -17917,7 +17917,7 @@ createNode place2dTexture -n "place2dTexture13";
 	rename -uid "944CF953-4B3B-EE9F-B47C-368C62530A88";
 createNode bump2d -n "bump2d1";
 	rename -uid "0453F858-454A-228F-86CA-7AA78262F09F";
-	setAttr ".vc1" -type "float3" 0 3.9999999e-005 0 ;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-005 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-006 9.9999997e-006 0 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "4BAB6151-4C2E-A68D-5916-26965DBC244A";
@@ -17968,7 +17968,6 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 15 ".tx";
-select -ne :lambert1;
 select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
