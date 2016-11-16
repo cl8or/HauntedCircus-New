@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Flashlight.ma
-//Last modified: Wed, Nov 16, 2016 03:01:50 PM
+//Last modified: Wed, Nov 16, 2016 03:05:31 PM
 //Codeset: 1252
 requires maya "2017";
 requires "OpenEXRLoader" "2012";
@@ -17,14 +17,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CE363728-4642-C74D-9C8D-E6B15DDBABC9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.8784794944056262 5.6619457824337935 -30.436486310193597 ;
-	setAttr ".r" -type "double3" 2153.0616473035243 1956.599999988887 0 ;
+	setAttr ".t" -type "double3" 32.597609650959988 13.206626732295126 -34.28486742507269 ;
+	setAttr ".r" -type "double3" 2145.2616473035187 1928.9999999888776 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "667E1A30-4FBD-CCE7-BB66-5A8C490C729A";
 	setAttr -k off ".v" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 22.872085576719485;
+	setAttr ".coi" 43.753247788371489;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
