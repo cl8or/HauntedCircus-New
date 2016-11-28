@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: MercedesFountaine.ma
-//Last modified: Mon, Nov 28, 2016 02:30:54 PM
+//Last modified: Mon, Nov 28, 2016 02:32:22 PM
 //Codeset: 1252
 file -rdi 1 -ns "Booth" -rfn "BoothRN" -op "v=0;" -shd "shadingNetworks" -shd
 		 "renderLayersByName" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Booth/Booth.ma";
@@ -70,7 +70,7 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "D635C78B-42C7-FCE3-3316-9883BBD2B29C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 470.75784454579548 71.601812033412642 36.231299599694914 ;
+	setAttr ".t" -type "double3" 470.75784454582492 71.601812033412315 36.231299599693799 ;
 	setAttr ".r" -type "double3" 0.65313984795415236 92.17127068823352 0 ;
 	setAttr ".rp" -type "double3" 8.8817841970012523e-016 -4.2632564145606011e-014 0 ;
 	setAttr ".rpt" -type "double3" 3.849066745484889e-015 2.6060098419840136e-016 -7.0684696199384021e-016 ;
@@ -78,7 +78,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "680A68AD-4CDE-96FA-6FC6-908906764512";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 486.87487729530301;
+	setAttr ".coi" 486.87487729533268;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -26503,7 +26503,7 @@ createNode mesh -n "Cockroach_BodyShape" -p "Cockroach_Body";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "LightsRNfosterParent1";
-	rename -uid "AF727A31-4753-E218-DDCB-04B6AB9BF606";
+	rename -uid "A80EA685-48F9-E119-0AAF-FEBB3BD8F307";
 createNode transform -n "curve10" -p "LightsRNfosterParent1";
 	rename -uid "F4D93582-4C9F-99FE-EAF6-53A0DE5DF9B3";
 	setAttr ".t" -type "double3" -182.2801678116455 110.1555509603949 92.654896503327421 ;
