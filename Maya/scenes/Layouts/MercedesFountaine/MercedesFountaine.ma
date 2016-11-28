@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: MercedesFountaine.ma
-//Last modified: Wed, Nov 16, 2016 04:21:31 PM
+//Last modified: Mon, Nov 28, 2016 02:17:52 PM
 //Codeset: 1252
 file -rdi 1 -ns "Booth" -rfn "BoothRN" -op "v=0;" -shd "shadingNetworks" -shd
 		 "renderLayersByName" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Booth/Booth.ma";
@@ -18,6 +18,12 @@ file -rdi 1 -ns "TrashcanMonster" -rfn "TrashcanMonsterRN" -op "v=0;" -typ "maya
 		 "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/T/TrashcanMonster/TrashcanMonster.ma";
 file -rdi 1 -ns "puppet" -rfn "puppetRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/P/Puppet/puppet.ma";
 file -rdi 1 -ns "Rope" -rfn "RopeRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/R/Rope/Rope.ma";
+file -rdi 1 -ns "TeddyBear" -dr 1 -rfn "TeddyBearRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Bears/TeddyBear.ma";
+file -rdi 1 -ns "Bear_Scary" -rfn "Bear_ScaryRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Bears/Bear-Scary.ma";
+file -rdi 1 -ns "TeddyBear1" -rfn "TeddyBearRN2" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Bears/TeddyBear.ma";
 file -r -ns "Booth" -dr 1 -rfn "BoothRN" -op "v=0;" -shd "shadingNetworks" -shd "renderLayersByName"
 		 -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Booth/Booth.ma";
 file -r -ns "Bear_Scary" -dr 1 -rfn "Bear_ScaryRN" -op "v=0;" -shd "shadingNetworks"
@@ -34,6 +40,9 @@ file -r -ns "TrashcanMonster" -dr 1 -rfn "TrashcanMonsterRN" -op "v=0;" -typ "ma
 		 "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/T/TrashcanMonster/TrashcanMonster.ma";
 file -r -ns "puppet" -dr 1 -rfn "puppetRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/P/Puppet/puppet.ma";
 file -r -ns "Rope" -dr 1 -rfn "RopeRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/R/Rope/Rope.ma";
+file -r -ns "TeddyBear" -dr 1 -rfn "TeddyBearRN1" -op "v=0;" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Bears/TeddyBear.ma";
+file -r -ns "Bear_Scary" -dr 1 -rfn "Bear_ScaryRN1" -op "v=0;" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Bears/Bear-Scary.ma";
+file -r -ns "TeddyBear1" -dr 1 -rfn "TeddyBearRN2" -op "v=0;" -typ "mayaAscii" "C:/Users/Sadie/NewHauntedCircus/Maya//scenes/Props/B/Bears/TeddyBear.ma";
 requires maya "2017";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "1.3.0.0";
 requires "stereoCamera" "10.0";
@@ -48,15 +57,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "D635C78B-42C7-FCE3-3316-9883BBD2B29C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 350.29782017252052 148.05571981693907 34.131623719608115 ;
-	setAttr ".r" -type "double3" 1.8531398479394412 87.771270688247299 -5.1116100960704908e-015 ;
+	setAttr ".t" -type "double3" 572.15121682349684 208.5494489869763 -1.7883607227979013 ;
+	setAttr ".r" -type "double3" -8.3468601520547736 89.371270688236052 0 ;
 	setAttr ".rp" -type "double3" 8.8817841970012523e-016 -4.2632564145606011e-014 0 ;
 	setAttr ".rpt" -type "double3" 3.849066745484889e-015 2.6060098419840136e-016 -7.0684696199384021e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "680A68AD-4CDE-96FA-6FC6-908906764512";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 357.80733731388131;
+	setAttr ".coi" 624.99710574656308;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -11802,7 +11811,7 @@ createNode mesh -n "Rope_geo1Shape" -p "Rope_geo1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "LightsRNfosterParent1";
-	rename -uid "D356E898-4F19-05F9-0ABA-2F8225DB2176";
+	rename -uid "7DE59196-448F-C19E-ED23-42A2C6D8283F";
 createNode transform -n "curve10" -p "LightsRNfosterParent1";
 	rename -uid "F4D93582-4C9F-99FE-EAF6-53A0DE5DF9B3";
 	setAttr ".t" -type "double3" -182.2801678116455 110.1555509603949 92.654896503327421 ;
@@ -38966,20 +38975,20 @@ createNode mesh -n "polySurfaceShape13" -p "curve10";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "5BE0F02C-495A-E935-3CE1-2BA0C5828CB3";
-	setAttr -s 82 ".lnk";
-	setAttr -s 82 ".slnk";
+	rename -uid "993E1549-4940-66CB-7161-AB87F8B4E950";
+	setAttr -s 89 ".lnk";
+	setAttr -s 89 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "838D43F7-4134-6708-7DCF-C193515636F3";
+	rename -uid "4567F473-4CF8-FFB8-AD49-589953CCE58C";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DDE996CC-4855-DC1F-12F4-0298EBCA4F3B";
+	rename -uid "61ABF0E6-4C00-7885-EB88-DC97B686FA12";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7B284046-42FE-14BC-0CDC-10B82D17C791";
+	rename -uid "5AB32BB0-4910-87FD-7678-74AF5059D2DB";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "BBDF2886-4428-C149-74D2-E5907B7E7EF5";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F7E0AABE-4646-7812-4CA2-45854DE201E1";
+	rename -uid "83F20F86-4984-E459-8D29-2DA3BC4CB505";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "94801585-4531-3E01-7EE0-3087B2722312";
 	setAttr ".g" yes;
@@ -39027,16 +39036,19 @@ createNode reference -n "FlashlightRN";
 lockNode -l 1 ;
 createNode reference -n "KunaiRN";
 	rename -uid "5FC0F5C8-4E30-6855-B8A0-CAB89529A5EC";
-	setAttr -s 2 ".phl";
+	setAttr -s 3 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"KunaiRN"
 		"KunaiRN" 0
-		"KunaiRN" 2
+		"KunaiRN" 3
 		5 4 "KunaiRN" "Kunai:aiStandard1SG.groupNodes" "KunaiRN.placeHolderList[1]" 
 		""
 		5 4 "KunaiRN" "Kunai:aiStandard1SG.groupNodes" "KunaiRN.placeHolderList[2]" 
+		""
+		5 4 "KunaiRN" "Kunai:aiStandard1SG.groupNodes" "KunaiRN.placeHolderList[3]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 	setAttr ".lk" yes;
@@ -39264,6 +39276,41 @@ createNode reference -n "RopeRN";
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode groupId -n "groupId7";
+	rename -uid "F28089F7-450E-9FE1-1C46-3BB0C081E56B";
+	setAttr ".ihi" 0;
+createNode reference -n "TeddyBearRN1";
+	rename -uid "0D66A7CD-4EFA-3BB1-7C11-9C82A3109941";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"TeddyBearRN1"
+		"TeddyBearRN1" 0;
+lockNode -l 1 ;
+createNode reference -n "Bear_ScaryRN1";
+	rename -uid "8204421D-4EE3-AD60-8254-368BF3CBFD4A";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Bear_ScaryRN1"
+		"Bear_ScaryRN1" 0
+		"Bear_ScaryRN1" 3
+		2 "|Bear_Scary:ScaryBear" "translate" " -type \"double3\" 100.54507806625011 89.367423997139738 -95.620747262821766"
+		
+		2 "|Bear_Scary:ScaryBear" "rotate" " -type \"double3\" 109.28878491214854 9.8818724045447457 53.018466782697928"
+		
+		2 "|Bear_Scary:ScaryBear" "scale" " -type \"double3\" 0.052524885829553045 0.052524885829553045 0.052524885829553045";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "TeddyBearRN2";
+	rename -uid "85908395-4D20-2C16-503C-449155F8CA9F";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"TeddyBearRN2"
+		"TeddyBearRN2" 0
+		"TeddyBearRN2" 3
+		2 "|TeddyBear1:TeddyBearRedo:polySurface1" "translate" " -type \"double3\" -40.882749516463413 26.063069802198456 260.14493751842195"
+		
+		2 "|TeddyBear1:TeddyBearRedo:polySurface1" "rotate" " -type \"double3\" -43.856382434210069 3.3899847758024029 7.053370767861904"
+		
+		2 "|TeddyBear1:TeddyBearRedo:polySurface1" "scale" " -type \"double3\" 0.94051359589755967 0.94051359589755967 0.94051359589755967";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -39276,20 +39323,18 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".tmr" 512;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 82 ".st";
+	setAttr -s 88 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 41 ".s";
+	setAttr -s 47 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 151 ".u";
+	setAttr -s 178 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 11 ".r";
-select -ne :lightList1;
-	setAttr -s 2 ".l";
+	setAttr -s 13 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 103 ".tx";
+	setAttr -s 128 ".tx";
 select -ne :lambert1;
 select -ne :initialShadingGroup;
 	setAttr -s 29 ".dsm";
@@ -39308,7 +39353,6 @@ select -ne :defaultResolution;
 	setAttr ".pa" 1;
 	setAttr ".dar" 1.3329999446868896;
 select -ne :defaultLightSet;
-	setAttr -s 3 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
@@ -39316,6 +39360,7 @@ select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 connectAttr "groupId1.msg" "KunaiRN.phl[1]";
 connectAttr "groupId6.msg" "KunaiRN.phl[2]";
+connectAttr "groupId7.msg" "KunaiRN.phl[3]";
 connectAttr "LightsRN.phl[1]" "curve10Shape.iog.og[1].gco";
 connectAttr "curve10Shape.iog.og[1]" "LightsRN.phl[2]";
 connectAttr "groupId3.msg" "LightsRN.phl[3]";
@@ -39352,5 +39397,6 @@ connectAttr "KunaiRNlocator.msg" "KunaiRN.asn[1]";
 connectAttr "KunaiRNannotation.msg" "KunaiRN.asn[2]";
 connectAttr "sharedReferenceNode.sr" "TeddyBearRN.sr";
 connectAttr "LightsRNfosterParent1.msg" "LightsRN.fp";
+connectAttr "sharedReferenceNode.sr" "TeddyBearRN1.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of MercedesFountaine.ma
