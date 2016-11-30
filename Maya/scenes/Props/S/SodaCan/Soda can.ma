@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Soda can.ma
-//Last modified: Wed, Nov 30, 2016 04:13:18 PM
+//Last modified: Wed, Nov 30, 2016 04:21:54 PM
 //Codeset: UTF-8
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -17,13 +17,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "F606BB73-AD45-39A2-D061-A0A640E8DBFE";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 184.203326490688 156.59523194385179 5.9086820622881344 ;
+	setAttr ".t" -type "double3" 186.37081466290653 158.3785105681136 5.7190514192281983 ;
 	setAttr ".r" -type "double3" -39.338352926117928 -4225.0000000088066 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E6805A22-AC4A-FF00-08F5-68B4A88936A8";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 67.526168651758212;
+	setAttr ".coi" 70.339360328349713;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3519,22 +3519,22 @@ createNode camera -n "bottomShape" -p "bottom";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1A97B3EB-344A-2A23-B85F-D898C0E9BF58";
+	rename -uid "BA2EE87E-754D-A818-C756-5280910D2F28";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "5FC8BDF1-1046-63E7-B54E-EB84CEEC27C7";
+	rename -uid "155CD2CE-B04A-E9BC-A97A-B5A5BB62CC4B";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E6BD2BB2-AB46-658A-F865-9087463C3A28";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "30AD44DD-654E-5319-9440-BC85432F0BAE";
+	rename -uid "3B4E304E-8847-0B0B-F620-9EA2D64ADEBE";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8CC59879-5442-FAEB-6EA2-1D8D096D1D60";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C09C0719-F24C-599E-3C8B-C2A0ED3A9C8E";
+	rename -uid "51C0C68C-354B-1FFF-7E61-AFA0E07980A2";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A6D75F61-FF41-7147-56C0-4F9AD65894AD";
+	rename -uid "94D31C19-6241-0B62-FF3C-2BA44E2F354D";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "26574CA0-0F4D-5066-15F0-4DB21E712431";
 	setAttr ".b" -type "string" (
@@ -3746,6 +3746,8 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "aiStandard1SG.message" ":defaultLightSet.message";
