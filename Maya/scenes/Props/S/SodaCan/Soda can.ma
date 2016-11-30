@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Soda can.ma
-//Last modified: Wed, Nov 30, 2016 04:26:23 PM
+//Last modified: Wed, Nov 30, 2016 04:35:50 PM
 //Codeset: UTF-8
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -3671,47 +3671,47 @@ createNode gammaCorrect -n "gammaCorrect1";
 createNode gammaCorrect -n "gammaCorrect2";
 	rename -uid "0D4F3815-4741-1159-2D98-9B8E302F0623";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "F15C41ED-D14E-CCDE-D68D-EB9034580840";
+	rename -uid "46C50419-D240-8098-5DC7-4B9AD3082C1B";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -1326.7388546501284 -152.30149724533624 ;
-	setAttr ".tgi[0].vh" -type "double2" 1576.5745273522778 819.93351905251745 ;
+	setAttr ".tgi[0].vl" -type "double2" -1174.1107906296595 -79.020409742120634 ;
+	setAttr ".tgi[0].vh" -type "double2" 1813.9285031424733 914.22598513213472 ;
 	setAttr -s 12 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -1070.18798828125;
-	setAttr ".tgi[0].ni[0].y" 310.4219970703125;
+	setAttr ".tgi[0].ni[0].x" -451.75509643554688;
+	setAttr ".tgi[0].ni[0].y" 549.92572021484375;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" -369.77420043945312;
-	setAttr ".tgi[0].ni[1].y" -32.857143402099609;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -408.3297119140625;
-	setAttr ".tgi[0].ni[2].y" 295.73190307617188;
-	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" -678.5714111328125;
-	setAttr ".tgi[0].ni[3].y" -52.857143402099609;
+	setAttr ".tgi[0].ni[1].x" -162.78388977050781;
+	setAttr ".tgi[0].ni[1].y" -79.684341430664062;
+	setAttr ".tgi[0].ni[1].nvs" 18304;
+	setAttr ".tgi[0].ni[2].x" 110.92704010009766;
+	setAttr ".tgi[0].ni[2].y" 82.112602233886719;
+	setAttr ".tgi[0].ni[2].nvs" 18305;
+	setAttr ".tgi[0].ni[3].x" 440.16571044921875;
+	setAttr ".tgi[0].ni[3].y" 51.300571441650391;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" 440.16571044921875;
-	setAttr ".tgi[0].ni[4].y" 51.300571441650391;
+	setAttr ".tgi[0].ni[4].x" -422.54544067382812;
+	setAttr ".tgi[0].ni[4].y" 199.9888916015625;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" -422.54544067382812;
-	setAttr ".tgi[0].ni[5].y" 199.9888916015625;
+	setAttr ".tgi[0].ni[5].x" -788.10760498046875;
+	setAttr ".tgi[0].ni[5].y" 161.73286437988281;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" -788.10760498046875;
-	setAttr ".tgi[0].ni[6].y" 161.73286437988281;
+	setAttr ".tgi[0].ni[6].x" -839.2244873046875;
+	setAttr ".tgi[0].ni[6].y" 588.34503173828125;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" -839.2244873046875;
-	setAttr ".tgi[0].ni[7].y" 588.34503173828125;
+	setAttr ".tgi[0].ni[7].x" -726.536865234375;
+	setAttr ".tgi[0].ni[7].y" 346.15646362304688;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
-	setAttr ".tgi[0].ni[8].x" -727.98565673828125;
-	setAttr ".tgi[0].ni[8].y" 343.2589111328125;
+	setAttr ".tgi[0].ni[8].x" -1070.18798828125;
+	setAttr ".tgi[0].ni[8].y" 310.4219970703125;
 	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" -451.75509643554688;
-	setAttr ".tgi[0].ni[9].y" 549.92572021484375;
+	setAttr ".tgi[0].ni[9].x" -369.77420043945312;
+	setAttr ".tgi[0].ni[9].y" -32.857143402099609;
 	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" 110.92704010009766;
-	setAttr ".tgi[0].ni[10].y" 82.112602233886719;
-	setAttr ".tgi[0].ni[10].nvs" 18305;
-	setAttr ".tgi[0].ni[11].x" -162.78388977050781;
-	setAttr ".tgi[0].ni[11].y" -79.684341430664062;
-	setAttr ".tgi[0].ni[11].nvs" 18304;
+	setAttr ".tgi[0].ni[10].x" -408.3297119140625;
+	setAttr ".tgi[0].ni[10].y" 295.73190307617188;
+	setAttr ".tgi[0].ni[10].nvs" 18304;
+	setAttr ".tgi[0].ni[11].x" -678.5714111328125;
+	setAttr ".tgi[0].ni[11].y" -52.857143402099609;
+	setAttr ".tgi[0].ni[11].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3858,29 +3858,29 @@ connectAttr "place2dTexture4.o" "file4.uv";
 connectAttr "place2dTexture4.ofs" "file4.fs";
 connectAttr "file2.oc" "gammaCorrect1.v";
 connectAttr "file3.oc" "gammaCorrect2.v";
-connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "file4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "gammaCorrect2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "gammaCorrect1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "aiStandard1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "aiStandard1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "aiStandard1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "place2dTexture4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "place2dTexture4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "file4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "aiStandard1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "gammaCorrect1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "gammaCorrect2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
 connectAttr "aiStandard1SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandard1.msg" ":defaultShaderList1.s" -na;
